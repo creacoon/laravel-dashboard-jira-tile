@@ -17,21 +17,15 @@ class FetchDataFromJiraCommand extends Command
 
     public function handle()
     {
-        #$project = jira()->projects()->get("CDASH");
-
-        //Make filter
         $request = app(\Atlassian\JiraRest\Requests\Issue\IssueRequest::class);
         $response = $request->search([
             'maxResults' => 10,
             'startAt' => 0,
-            #'fields' => "summary, comment, status, assignee, avatarUrls, project",
             'jql' => 'status="In Progress"'
         ]);
 
-        //Format
         $output = \json_decode($response->getBody()->getContents(), true);
-
-        //Place in 1 array
+        
         $jiraData = [];
         $i = 0;
         foreach ($output["issues"] as $issue){
@@ -44,7 +38,6 @@ class FetchDataFromJiraCommand extends Command
             $i++;
         }
 
-        //Store data
         JiraStore::make()->setData($jiraData);
         $this->info('All done!');
     }
