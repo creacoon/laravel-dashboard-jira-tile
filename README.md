@@ -1,12 +1,12 @@
-# A short description of the tile
+# An easy overview of Jira in progress
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/:vendor/:package_name.svg?style=flat-square)](https://packagist.org/packages/:vendor/:package_name)
-[![GitHub Tests Action Status](https://img.shields.io/github/workflow/status/:vendor/:package_name/run-tests?label=tests)](https://github.com/:vendor/:package_name/actions?query=workflow%3Arun-tests+branch%3Amaster)
-[![Total Downloads](https://img.shields.io/packagist/dt/:vendor/:package_name.svg?style=flat-square)](https://packagist.org/packages/:vendor/:package_name)
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/creacoon/laravel-dashboard-jira-tile.svg?style=flat-square)](https://packagist.org/packages/creacoon/laravel-dashboard-jira-tile)
+[![GitHub Tests Action Status](https://img.shields.io/github/workflow/status/creacoon/laravel-dashboard-jira-tile/run-tests?label=tests)](https://github.com/creacoon/laravel-dashboard-jira-tile/actions?query=workflow%3Arun-tests+branch%3Amaster)
+[![Total Downloads](https://img.shields.io/packagist/dt/creacoon/laravel-dashboard-jira-tile.svg?style=flat-square)](https://packagist.org/packages/creacoon/laravel-dashboard-jira-tile)
 
 This tile shows all the in progress Jira stories. It shows the story key, story title and the assignee profile image.
 
-This tile can be used on [the Laravel Dashboard](https://docs.spatie.be/laravel-dashboard).
+This tile can be used on the [Laravel Dashboard](https://docs.spatie.be/laravel-dashboard).
 
 ## Screenshots
 <img src="./docs/images/jira-tile.png"/><br />
