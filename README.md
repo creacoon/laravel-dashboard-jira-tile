@@ -1,7 +1,7 @@
 # An easy overview of Jira in progress stories
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/creacoon/laravel-dashboard-jira-tile.svg?style=flat-square)](https://packagist.org/packages/creacoon/laravel-dashboard-jira-tile)
-[![GitHub Tests Action Status](https://img.shields.io/github/workflow/status/creacoon/laravel-dashboard-jira-tile/run-tests?label=tests)](https://github.com/creacoon/laravel-dashboard-jira-tile/actions?query=workflow:php+branch:master)
+[![GitHub Tests Action Status](https://img.shields.io/github/workflow/status/creacoon/laravel-dashboard-jira-tile/PHP%20Composer/master)](https://github.com/creacoon/laravel-dashboard-jira-tile/actions?query=workflow%3Aphp+branch%3Amaster)
 [![Total Downloads](https://img.shields.io/packagist/dt/creacoon/laravel-dashboard-jira-tile.svg?style=flat-square)](https://packagist.org/packages/creacoon/laravel-dashboard-jira-tile)
 
 This tile shows all the in progress Jira stories. It shows the story key, story title and the assignee profile image.
