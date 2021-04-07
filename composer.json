@@ -1,6 +1,6 @@
 {
     "name": "creacoon/laravel-dashboard-jira-tile",
-    "description": "jira tile for spatie/laravel-dashboard",
+    "description": "Jira tile for spatie/laravel-dashboard",
     "keywords": [
         "creacoon",
         "laravel-dashboard-helpscout-tile"
