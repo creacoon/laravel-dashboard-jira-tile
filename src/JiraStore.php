@@ -20,13 +20,13 @@ class JiraStore
 
     public function setData(array $data): self
     {
-        $this->tile->putData('Jira', $data);
+        $this->tile->putData('JiraInProgressStore', $data);
 
         return $this;
     }
 
     public function getData(): array
     {
-        return$this->tile->getData('Jira') ?? [];
+        return$this->tile->getData('JiraInProgressStore') ?? [];
     }
 }
