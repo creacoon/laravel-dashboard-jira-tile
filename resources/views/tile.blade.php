@@ -11,7 +11,11 @@
                     <div>
                         <div class="pl-3 pt-1 pb-1 rounded-t-lg flex" style="font-size: 1.4rem; background-color: rgb(0, 82, 204);">
                             <div class="w-5/6">{{$issue["key"]}}</div>
-                            <img class="w-1/6 rounded-full" src="{{$issue["asImg"]}}" style="max-width: 2rem">
+                            @if ($issue['asImg'])
+                            <img class="w-1/6 rounded-full" src="{{$issue["asImg"]}}" style="max-width: 2rem" alt="employee profile picture">
+                            @else
+                                <div class="w-1/6 rounded-full" style="max-width: 2rem"></div>
+                            @endif
                         </div>
                         <div class="rounded-b-lg" style="border: 1px solid rgb(0, 82, 204); border-top: 0; color:white;">
                             <div class="pl-3" style="margin: 0 0.05rem 0.05rem 0.05rem">
