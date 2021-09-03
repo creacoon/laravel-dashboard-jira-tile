@@ -25,15 +25,18 @@ class FetchDataFromJiraCommand extends Command
         ]);
 
         $output = \json_decode($response->getBody()->getContents(), true);
-        
+
         $jiraData = [];
         $i = 0;
         foreach ($output["issues"] as $issue){
+            $initials = explode(' ', $issue["fields"]["assignee"]["displayName"]);
+
             $jiraData[$i] = [
                 'key' => $issue["key"],
                 'title' => $issue["fields"]["summary"],
                 'prImg' => $issue["fields"]["project"]["avatarUrls"]["48x48"],
-                'asImg' => $issue["fields"]["assignee"]["avatarUrls"]["48x48"],
+                'asImg' => $issue["fields"]["assignee"]["avatarUrls"]["48x48"] ?? null,
+                'asInitials' => substr($initials[0],0,1).substr($initials[1],0,1),
             ];
             $i++;
         }
