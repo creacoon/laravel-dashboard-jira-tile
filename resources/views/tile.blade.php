@@ -14,7 +14,7 @@
                             @if ($issue['asImg'])
                             <img class="w-1/6 rounded-full" src="{{$issue["asImg"]}}" style="max-width: 2rem" alt="employee profile picture">
                             @else
-                                <div class="w-1/6 rounded-full" style="max-width: 2rem"></div>
+                                <div class="w-1/6 rounded-full" style="max-width: 2rem">{{ $issue['asInitials'] }}</div>
                             @endif
                         </div>
                         <div class="rounded-b-lg" style="border: 1px solid rgb(0, 82, 204); border-top: 0; color:white;">
