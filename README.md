@@ -49,7 +49,7 @@ In `app\Console\Kernel.php` you should schedule the following commands.
 protected function schedule(Schedule $schedule)
 {
     // ...
-           $schedule->command(FetchDataFromHelpscoutCommand::class)->everyFiveMinutes();
+           $schedule->command(FetchDataFromJiraCommand::class)->everyFiveMinutes();
 }
 ```
 
