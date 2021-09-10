@@ -29,7 +29,7 @@ class FetchDataFromJiraCommand extends Command
         $jiraData = [];
         $i = 0;
         foreach ($output["issues"] as $issue) {
-            $nameArray = explode(' ', $issue["fields"]["assignee"]["displayName"]) ?? null;
+            $nameArray = (! empty($issue["fields"]["assignee"]["displayName"]) ? explode(' ', $issue["fields"]["assignee"]["displayName"]) : null);
 
             if ($nameArray){
                 $initials = substr($nameArray[0], 0, 1).
