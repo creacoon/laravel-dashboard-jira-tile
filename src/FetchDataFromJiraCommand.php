@@ -29,10 +29,12 @@ class FetchDataFromJiraCommand extends Command
         $jiraData = [];
         $i = 0;
         foreach ($output["issues"] as $issue) {
-            $nameArray = explode(' ', $issue["fields"]["assignee"]["displayName"]);
+            $nameArray = explode(' ', $issue["fields"]["assignee"]["displayName"]) ?? null;
 
-            $initials = substr($nameArray[0], 0, 1).
-                (($nameArray[1] ?? false) ? substr($nameArray[(count($nameArray)-1)], 0, 1) : '');
+            if ($nameArray){
+                $initials = substr($nameArray[0], 0, 1).
+                    (($nameArray[1] ?? false) ? substr($nameArray[(count($nameArray)-1)], 0, 1) : '');
+            }
 
             $jiraData[$i] = [
                 'key' => $issue["key"],
