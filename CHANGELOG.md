@@ -4,6 +4,8 @@ All notable changes to `creacoon/laravel-dashboard-jira-tile` will be documented
 
 ## [Unreleased]
 
+## [2.0.0] 2025-01-30
+
 ### Added
 - Config added for executed JQL and max results
 
