@@ -52,7 +52,22 @@ protected function schedule(Schedule $schedule)
            $schedule->command(FetchDataFromJiraCommand::class)->everyFiveMinutes();
 }
 ```
+## Config file
+In the `dashboard` config file, you must add this configuration in the `tiles` key:
 
+```php
+// in config/dashboard.php
+
+return [
+ // ...
+    'tiles' => [
+         'jira' => [
+            'max_results' => env('JIRA_MAX_RESULTS', 10),
+            'jql' => env('JIRA_JQL', 'status="In Progress"'),
+        ]
+    ],
+];
+```
 ## Customizing the view
 If you want to customize the view used to render this tile, run this command:
 ```bash

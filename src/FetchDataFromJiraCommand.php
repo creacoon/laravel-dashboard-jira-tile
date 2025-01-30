@@ -19,9 +19,9 @@ class FetchDataFromJiraCommand extends Command
     {
         $request = app(\Atlassian\JiraRest\Requests\Issue\IssueRequest::class);
         $response = $request->search([
-            'maxResults' => 10,
+            'maxResults' => config('dashboard.tiles.jira.max_results'),
             'startAt' => 0,
-            'jql' => 'status="In Progress"'
+            'jql' => config('dashboard.tiles.jira.jql'),
         ]);
 
         $output = \json_decode($response->getBody()->getContents(), true);
