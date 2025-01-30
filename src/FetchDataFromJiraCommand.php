@@ -17,11 +17,14 @@ class FetchDataFromJiraCommand extends Command
 
     public function handle()
     {
+        $maxResults = config('jira_tile.max_results', 10);
+        $jql = config('jira_tile.jql', 'status="In Progress"');
+
         $request = app(\Atlassian\JiraRest\Requests\Issue\IssueRequest::class);
         $response = $request->search([
-            'maxResults' => 10,
+            'maxResults' => $maxResults,
             'startAt' => 0,
-            'jql' => 'status="In Progress"'
+            'jql' => $jql,
         ]);
 
         $output = \json_decode($response->getBody()->getContents(), true);
