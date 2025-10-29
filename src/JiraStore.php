@@ -10,12 +10,12 @@ class JiraStore
 
     public static function make()
     {
-        return new static();
+        return new static;
     }
 
     public function __construct()
     {
-        $this->tile = Tile::firstOrCreateForName("JiraTile");
+        $this->tile = Tile::firstOrCreateForName('JiraTile');
     }
 
     public function setData(array $data): self
@@ -27,6 +27,6 @@ class JiraStore
 
     public function getData(): array
     {
-        return$this->tile->getData('JiraInProgressStore') ?? [];
+        return $this->tile->getData('JiraInProgressStore') ?? [];
     }
 }

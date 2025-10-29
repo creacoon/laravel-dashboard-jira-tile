@@ -15,12 +15,19 @@
             "role": "Developer"
         }
     ],
+    "repositories": [
+      {
+        "type": "vcs",
+        "url": "https://github.com/creacoon/laravel-jira-rest-client"
+      }
+    ],
     "require": {
         "php": "^8.3",
-        "rjvandoesburg/laravel-jira-rest-client": "^3.0",
+        "rjvandoesburg/laravel-jira-rest-client": "^2.0",
         "spatie/laravel-dashboard": "^3.1.0"
     },
     "require-dev": {
+        "laravel/pint": "^1.25",
         "phpunit/phpunit": "^11.5.5"
     },
     "autoload": {

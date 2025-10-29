@@ -16,10 +16,10 @@ class JiraTileServiceProvider extends ServiceProvider
         }
 
         $this->publishes([
-            __DIR__ . '/../resources/views' => resource_path('views/creacoon/dashboard-jira-tile'),
+            __DIR__.'/../resources/views' => resource_path('views/creacoon/dashboard-jira-tile'),
         ], 'dashboard-jira-tile-views');
 
-        $this->loadViewsFrom(__DIR__ . '/../resources/views', 'dashboard-jira-tile');
+        $this->loadViewsFrom(__DIR__.'/../resources/views', 'dashboard-jira-tile');
 
         Livewire::component('jira-tile', JiraTileComponent::class);
     }

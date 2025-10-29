@@ -12,8 +12,7 @@ class JiraTileComponent extends Component
     {
         $this->position = $position;
     }
-    
-    
+
     public function render()
     {
         return view('dashboard-jira-tile::tile', [
