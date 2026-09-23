@@ -2,14 +2,13 @@
 
 declare(strict_types=1);
 
-namespace Creacoon\HelpscoutTile\Tests;
+namespace Creacoon\JiraTile\Tests;
 
 use PHPUnit\Framework\TestCase;
 
 class ExampleTest extends TestCase
 {
-    /** @test */
-    public function true_is_true()
+    public function test_true_is_true(): void
     {
         $this->assertTrue(true);
     }

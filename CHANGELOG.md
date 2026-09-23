@@ -4,6 +4,9 @@ All notable changes to `creacoon/laravel-dashboard-jira-tile` will be documented
 
 ## [Unreleased]
 
+### Changed
+- Require `spatie/laravel-dashboard` ^4.0 (Livewire 4, Tailwind CSS 4)
+
 ## [2.0.0] 2025-01-30
 
 ### Added
